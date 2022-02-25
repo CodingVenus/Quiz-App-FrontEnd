@@ -15,11 +15,11 @@ export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  public getCategory(): Observable<Category[]> {
-    return this.http.get<Category[]>(`t${this.apiUrl}/category`);
+  public getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.apiUrl}/category/all`);
   }
   public createCategory(): Observable<Category> {
-    return this.http.get<Category>(`t${this.apiUrl}/category`);
+    return this.http.get<Category>(`${this.apiUrl}/category/new`);
   }
 
 }
