@@ -41,9 +41,10 @@ public thisQuestion: number = 0;
     }
 
     chooseRightAnswer(thisQuestion: number, answer: any ){
-      if(answer.isCorrect.true){
+      if(answer.correct){
       this.score+= 20;
-      this.thisQuestion++
+      } else {
+
       }
 
     }
