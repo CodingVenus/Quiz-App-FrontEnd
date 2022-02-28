@@ -39,6 +39,13 @@ public thisQuestion: number = 0;
     previous() {
       this.thisQuestion--;
     }
+
+    chooseRightAnswer(thisQuestion: number, answer: any ){
+      if(answer.isCorrect.true){
+      this.score+= 20;
+      }
+
+    }
   
 
 }
