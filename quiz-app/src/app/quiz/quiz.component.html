@@ -26,9 +26,10 @@
 
         <div class="card answer py-3">
             
-                <ol>
+                <ol *ngFor="let answer of questionsList[0]?.answerList">
                     <li>
-                        Answer
+                        <div>{{answer.answer}}</div>
+                        
                     </li>
                 </ol>
     
