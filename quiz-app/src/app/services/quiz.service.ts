@@ -16,9 +16,10 @@ export class QuizService {
 
   constructor(private http: HttpClient) { }
 
-  // public getQuizzes(): Observable<Quiz[]> {
-  //   return this.http.get<Quiz[]>(`${this.apiUrl}/quiz/all`);
-  // }
+  
+  public getQuizzes(): Observable<Quiz[]> {
+    return this.http.get<Quiz[]>(`${this.apiUrl}/quiz/all`);
+  }
 
   getQuizzesByCategoryId(categoryId : any): Observable<Quiz[]> {
 

@@ -23,29 +23,25 @@ public categoryId : any;
 
   ngOnInit(): void {
    
-    // this.categoryId = {
 
-    // id: parseInt(this.route.snapshot.params['id']),
     this.categoryId = this.route.snapshot.paramMap.get('id');
 
-    // }
-    
 
     this.getQuizzesByCategoryId(this.categoryId);
   }
 
    
-  // public getQuizzes(): void {
-  //   this.quizService.getQuizzes().subscribe(
-  //     (response: Quiz[]) => {
-  //       this.quizList = response;
-  //       console.log(this.quizList);
-  //     },
-  //     (error: HttpErrorResponse) => {
-  //       alert(error.message);
-  //     }
-  //   );
-  // }
+  public getQuizzes(): void {
+    this.quizService.getQuizzes().subscribe(
+      (response: Quiz[]) => {
+        this.quizList = response;
+        console.log(this.quizList);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
 
 
   public getQuizzesByCategoryId(categoryId : any): void {

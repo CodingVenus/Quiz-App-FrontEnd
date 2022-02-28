@@ -11,22 +11,13 @@ import { CategoryService } from '../services/category.service';
 })
 export class CategoryComponent implements OnInit {
   public categoryList: Category[] | undefined;
-  public category : any;
 
-  constructor(private categoryService: CategoryService, private router: Router) { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.getCategories();
 
-
-
   }
-
-  onSelect(category : any){
-    this.router.navigate(['/category'], category.id) 
-  }
-
-
 
 
   public getCategories(): void {

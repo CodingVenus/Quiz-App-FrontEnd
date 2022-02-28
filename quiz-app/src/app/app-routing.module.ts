@@ -10,21 +10,10 @@ import { QuizComponent } from './quiz/quiz.component';
 const routes: Routes = [
   { path: '', redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-  {
-    path: "category", component: CategoryComponent,
-    // children: [
-    //   {
-    //     path: "quiz-list/:id", component: QuizListComponent,
-    //     children: [
-    //       { path: "quiz/:id", component: QuizComponent },
-    //     ]
-    //   }
-    // ]
-  },
+  {path: "category", component: CategoryComponent },
 
   {path: "category/:id/quizzes", component: QuizListComponent},
 
-  // {path: "quiz-list", component: QuizListComponent},
   {path:"quiz", component:QuizComponent},
 
 ];
