@@ -18,7 +18,7 @@ public thisQuestion: number = 0;
   ngOnInit(): void {
     this.getQuestions();
   }
-  
+
   
   public getQuestions(): void {
     this.questionService.getQuestions().subscribe(
@@ -30,6 +30,16 @@ public thisQuestion: number = 0;
         alert(error.message);
       }
     );
+  }
+
+    next() {
+      this.thisQuestion++;
+    }
+
+    previous() {
+      this.thisQuestion--;
+    }
+  
 
 }
-}
+
