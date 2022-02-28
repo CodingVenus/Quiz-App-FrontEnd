@@ -13,8 +13,10 @@ const routes: Routes = [
   {path: "category", component: CategoryComponent },
 
   {path: "category/:id/quizzes", component: QuizListComponent},
+  {path: "quiz/:id/questions", component: QuizComponent}
 
-  {path:"quiz", component:QuizComponent},
+  
+  // {path:"quiz", component:QuizComponent},
 
 ];
 

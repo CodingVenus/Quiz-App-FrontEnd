@@ -10,12 +10,12 @@
         <div *ngFor="let quiz of quizList" class="row row-cols-lg-3 row-cols-md-2 row-cols-1 text-center justify-content-center px-xl-6 aos-init aos-animate" data-aos="fade-up">
             <div class="col my-3">
                 <div class="card border-hover-primary hover-scale">
+                    <a  routerLink="/quiz/{{quiz?.id}}/questions">
                     <div class="card-body">
-                        <div class="text-primary mb-5">
-                
-                        </div>
+                        
                         <h6 class="font-weight-bold mb-3">QUIZ NAME: {{quiz?.name}}</h6>
                     </div>
+                    </a>
                 </div>
             </div>
             <!-- <div class="col my-3">

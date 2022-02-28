@@ -12,17 +12,17 @@ import { QuizService } from '../services/quiz.service';
 })
 export class QuizListComponent implements OnInit {
 
+  public category : Category | undefined;
 
-
-public categoryId : any;
+  public categoryId: any;
 
   public quizList: Quiz[] = [];
 
 
-  constructor(private quizService: QuizService, private router: Router, private route : ActivatedRoute) { }
+  constructor(private quizService: QuizService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-   
+
 
     this.categoryId = this.route.snapshot.paramMap.get('id');
 
@@ -30,7 +30,7 @@ public categoryId : any;
     this.getQuizzesByCategoryId(this.categoryId);
   }
 
-   
+
   public getQuizzes(): void {
     this.quizService.getQuizzes().subscribe(
       (response: Quiz[]) => {
@@ -44,17 +44,17 @@ public categoryId : any;
   }
 
 
-  public getQuizzesByCategoryId(categoryId : any): void {
+  public getQuizzesByCategoryId(categoryId: any): void {
     this.quizService.getQuizzesByCategoryId(categoryId)
-  
-    .subscribe(
-      (response: Quiz[]) => {
-        this.quizList = response;
-        console.log(this.quizList);
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
+
+      .subscribe(
+        (response: Quiz[]) => {
+          this.quizList = response;
+          console.log(this.quizList);
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+      );
   }
 }

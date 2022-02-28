@@ -12,8 +12,12 @@ export class QuestionService {
 
   constructor(private http: HttpClient){}
 
-  public getQuestions(): Observable<Question[]> {
-    return this.http.get<Question[]>(`${this.apiUrl}/question/all`);
+  // public getQuestions(): Observable<Question[]> {
+  //   return this.http.get<Question[]>(`${this.apiUrl}/question/all`);
+  // }
+
+  public getQuestionsByQuizId(quizId : any): Observable<Question[]> {
+    return this.http.get<Question[]>(`${this.apiUrl}/quiz/${quizId}/questions`);
   }
 
   // public addEmployee(question: Question): Observable<Question> {
