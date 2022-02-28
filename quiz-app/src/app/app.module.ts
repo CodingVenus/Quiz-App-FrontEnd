@@ -10,6 +10,8 @@ import { ResultsComponent } from './results/results.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './category/category.component';
+import { HomeComponent } from './home/home.component';
+import { QuizListComponent } from './quiz-list/quiz-list.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { CategoryComponent } from './category/category.component';
     QuizComponent,
     ResultsComponent,
     CategoryComponent,
+    HomeComponent,
+    QuizListComponent,
   
   ],
   imports: [
