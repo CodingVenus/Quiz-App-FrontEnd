@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Question } from '../question';
-import { QuestionService } from '../question.service';
+import { Question } from '../entities/question';
+import { QuestionService } from '../services/question.service';
 
 @Component({
   selector: 'app-quiz',

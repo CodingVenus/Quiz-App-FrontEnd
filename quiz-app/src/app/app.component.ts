@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from './category.service';
-import { Category } from './Category';
+import { CategoryService } from './services/category.service';
+import { Category } from './entities/category';
 import { HttpErrorResponse } from '@angular/common/http';
 
 
