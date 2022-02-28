@@ -1,5 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Category } from '../entities/category';
 import { Quiz } from '../entities/quiz';
 import { QuizService } from '../services/quiz.service';
 
@@ -10,28 +12,46 @@ import { QuizService } from '../services/quiz.service';
 })
 export class QuizListComponent implements OnInit {
 
+
+
+public categoryId : any;
+
   public quizList: Quiz[] = [];
 
-  constructor(private quizService: QuizService) { }
+
+  constructor(private quizService: QuizService, private router: Router, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getQuizzes();
+   
+    // this.categoryId = {
+
+    // id: parseInt(this.route.snapshot.params['id']),
+    this.categoryId = this.route.snapshot.paramMap.get('id');
+
+    // }
+    
+
+    this.getQuizzesByCategoryId(this.categoryId);
   }
 
    
-  public getQuizzes(): void {
-    this.quizService.getQuizzes().subscribe(
-      (response: Quiz[]) => {
-        this.quizList = response;
-        console.log(this.quizList);
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
-  public getQuizzesByCategoryId(): void {
-    this.quizService.getQuizzesByCategoryId().subscribe(
+  // public getQuizzes(): void {
+  //   this.quizService.getQuizzes().subscribe(
+  //     (response: Quiz[]) => {
+  //       this.quizList = response;
+  //       console.log(this.quizList);
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
+
+
+  public getQuizzesByCategoryId(categoryId : any): void {
+    this.quizService.getQuizzesByCategoryId(categoryId)
+  
+    .subscribe(
       (response: Quiz[]) => {
         this.quizList = response;
         console.log(this.quizList);

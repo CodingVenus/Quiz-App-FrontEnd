@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Quiz} from '../entities/quiz'
 
@@ -16,12 +16,15 @@ export class QuizService {
 
   constructor(private http: HttpClient) { }
 
-  public getQuizzes(): Observable<Quiz[]> {
-    return this.http.get<Quiz[]>(`${this.apiUrl}/quiz/all`);
+  // public getQuizzes(): Observable<Quiz[]> {
+  //   return this.http.get<Quiz[]>(`${this.apiUrl}/quiz/all`);
+  // }
+
+  getQuizzesByCategoryId(categoryId : any): Observable<Quiz[]> {
+
+    return this.http.get<Quiz[]>(`${this.apiUrl}/category/${categoryId}/quizzes`);
   }
 
-  getQuizzesByCategoryId(): Observable<Quiz[]> {
-    return this.http.get<Quiz[]>(`${this.apiUrl}/category/{categoryId}/quizzes`);
-  }
+
 
 }

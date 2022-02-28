@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from '../entities/category';
 import { CategoryService } from '../services/category.service';
 
@@ -9,20 +10,30 @@ import { CategoryService } from '../services/category.service';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  public categories: Category[] | undefined;
+  public categoryList: Category[] | undefined;
+  public category : any;
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(private categoryService: CategoryService, private router: Router) { }
 
   ngOnInit(): void {
-        this.getCategories();
+    this.getCategories();
+
+
 
   }
 
-   public getCategories(): void {
+  onSelect(category : any){
+    this.router.navigate(['/category'], category.id) 
+  }
+
+
+
+
+  public getCategories(): void {
     this.categoryService.getCategories().subscribe(
       (response: Category[]) => {
-        this.categories = response;
-        console.log(this.categories);
+        this.categoryList = response;
+        console.log(this.categoryList);
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
