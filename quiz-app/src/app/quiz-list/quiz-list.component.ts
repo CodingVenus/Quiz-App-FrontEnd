@@ -30,4 +30,15 @@ export class QuizListComponent implements OnInit {
       }
     );
   }
+  public getQuizzesByCategoryId(): void {
+    this.quizService.getQuizzesByCategoryId().subscribe(
+      (response: Quiz[]) => {
+        this.quizList = response;
+        console.log(this.quizList);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
 }

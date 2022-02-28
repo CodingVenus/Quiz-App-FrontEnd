@@ -20,4 +20,8 @@ export class QuizService {
     return this.http.get<Quiz[]>(`${this.apiUrl}/quiz/all`);
   }
 
+  getQuizzesByCategoryId(): Observable<Quiz[]> {
+    return this.http.get<Quiz[]>(`${this.apiUrl}/category/{categoryId}/quizzes`);
+  }
+
 }
