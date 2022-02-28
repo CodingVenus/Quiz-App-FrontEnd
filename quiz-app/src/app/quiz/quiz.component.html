@@ -23,14 +23,14 @@
                    <br>
                    <div>
 
-                   <h4>This is a placeholder for the question?</h4> 
+                   <h4>{{questionsList[thisQuestion]?.question}}</h4> 
                 </div>
             </div>
         </div>
 
         <div class="card answer py-3">
             
-                <ol *ngFor="let answer of questionsList[0]?.answerList">
+                <ol *ngFor="let answer of questionsList[thisQuestion]?.answerList">
                     <li>
                         <div>{{answer.answer}}</div>
                         
@@ -39,7 +39,7 @@
             
         </div>
         <div class="d-flex justify-content-between">
-            <button type="button" (click)="next()" class="btn btn-outline-success">Previous</button>
+            <button type="button" (click)="previous()" class="btn btn-outline-success">Previous</button>
 
             <button type="button" (click)="next()" class="btn btn-outline-success">Next</button>
 
