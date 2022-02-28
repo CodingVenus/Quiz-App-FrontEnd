@@ -11,9 +11,11 @@ import { QuizService } from '../services/quiz.service';
 export class QuizListComponent implements OnInit {
 
   public quizList: Quiz[] = [];
+
   constructor(private quizService: QuizService) { }
 
   ngOnInit(): void {
+    this.getQuizzes();
   }
 
    
