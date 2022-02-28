@@ -18,19 +18,19 @@ export class AppComponent implements OnInit {
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
-    this.getCategories();
+    // this.getCategories();
   }
 
-  public getCategories(): void {
-    this.categoryService.getCategories().subscribe(
-      (response: Category[]) => {
-        this.categories = response;
-        console.log(this.categories);
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
+  // public getCategories(): void {
+  //   this.categoryService.getCategories().subscribe(
+  //     (response: Category[]) => {
+  //       this.categories = response;
+  //       console.log(this.categories);
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
 
 }

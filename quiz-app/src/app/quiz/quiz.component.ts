@@ -1,4 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Question } from '../question';
+import { QuestionService } from '../question.service';
 
 @Component({
   selector: 'app-quiz',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+public questionsList: Question[] = [];
 
-  constructor() { }
+  constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
+    this.getQuestions();
   }
+  
+  public getQuestions(): void {
+    this.questionService.getQuestions().subscribe(
+      (response: Question[]) => {
+        this.questionsList = response;
+        console.log(this.questionsList);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
 
+}
 }
