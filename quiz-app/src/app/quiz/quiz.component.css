@@ -2,5 +2,8 @@ li{
 
     cursor: pointer;
     list-style-type: none;
+}
 
+li:hover{
+    background-color: green;
 }
