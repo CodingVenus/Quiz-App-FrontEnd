@@ -7,13 +7,15 @@ import { CategoryService } from './category.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultsComponent } from './results/results.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     QuizComponent,
-    ResultsComponent
+    ResultsComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
