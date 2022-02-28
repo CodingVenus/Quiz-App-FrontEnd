@@ -19,6 +19,7 @@ public thisQuestion: number = 0;
     this.getQuestions();
   }
   
+  
   public getQuestions(): void {
     this.questionService.getQuestions().subscribe(
       (response: Question[]) => {
