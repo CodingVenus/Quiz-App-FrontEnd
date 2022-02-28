@@ -31,7 +31,7 @@
         <div class="card answer py-3">
             
                 <ol *ngFor="let answer of questionsList[thisQuestion]?.answerList">
-                    <li>
+                    <li (click)="chooseRightAnswer(thisQuestion, answer)" >
                         <div>{{answer.answer}}</div>
                         
                     </li>
