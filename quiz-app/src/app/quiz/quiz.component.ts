@@ -10,6 +10,8 @@ import { QuestionService } from '../services/question.service';
 })
 export class QuizComponent implements OnInit {
 public questionsList: Question[] = [];
+public score: number = 0;
+public thisQuestion: number = 0;
 
   constructor(private questionService: QuestionService) { }
 
