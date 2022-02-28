@@ -7,7 +7,7 @@ import { CategoryService } from './category.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultsComponent } from './results/results.component';
-import { QuestionComponent } from './question/question.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,12 @@ import { QuestionComponent } from './question/question.component';
     NavbarComponent,
     QuizComponent,
     ResultsComponent,
-    QuestionComponent
+  
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
