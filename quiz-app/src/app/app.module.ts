@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { QuizListComponent } from './quiz-list/quiz-list.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule  
+    NgbModule, 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
