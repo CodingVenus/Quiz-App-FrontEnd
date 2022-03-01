@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Question } from '../entities/question';

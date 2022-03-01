@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* SIDE BAR STYLING */
+.side-bar {
+    
+    box-shadow: -3px -3px 7px #ffffff,
+        3px 3px 5px #ceced1;
+    width: 400px;
+    height: 100%; 
+    padding: 20px;
+    background: #ecf0f3;
+    
+}
+
+.side-bar ul {
+    list-style: none;
+}
+
+/* TITLE LOGO STYLING */
+.logo {
+    font-size: 45px;
+    font-weight: 200;
+    color: #f54914;
+}
+
+.title {
+    position: relative;
+    font-family: 'Monoton', sans-serif !important;
+
+}
+
+/* CATEGORY BOX STYLING */
+.category-container {
+    font-family: 'Poppins', sans-serif;
+}
+
