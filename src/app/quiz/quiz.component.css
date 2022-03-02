@@ -2,10 +2,13 @@ li{
 
     cursor: pointer;
     list-style-type: none;
+    border: solid 1px;
+    width:50%;
 }
 
 li:hover{
-    background-color: green;
+    background-color: white;
+    border: solid 1px #f54914;
 }
 
 .card-header{
@@ -14,4 +17,56 @@ border: none;
 box-shadow: none;
 color: rgb(233, 90, 47);
 
+}
+div.card.card-container{
+height: 1000px;
+
+}
+.card{
+background-color: #ecf0f3;
+}
+.quiz-container{
+background-color: white;
+
+}
+/* .card-container{
+    border: 1px solid;
+    border-radius: 20%;
+} */
+.quiz-container .card{
+    background-color: white;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+ol{
+margin-left: 30%;
+}
+
+
+#answer-click{
+background-color: white;
+  /* margin: 10px; */
+  /* width: 400px; */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  margin:20%;
+  border: solid 1px;
+  height: 30px;
+  cursor: pointer;
+}
+
+ng-container, .card {
+    border: solid 1px;
+    border-color: #f54914;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.total{
+font-weight: 800; 
+font-size: 1.2em;
 }

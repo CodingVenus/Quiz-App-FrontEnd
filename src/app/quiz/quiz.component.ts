@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Question } from '../entities/question';
 import { QuestionService } from '../services/question.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-quiz',
@@ -76,11 +77,22 @@ public quizId: any;
 
       if(answer.correct){
       this.score+= 20;
+
+      //create timeout delay so people can see color pop up on screen
+      setTimeout(() => {
       this.answersCorrect ++;
+      this.next();
+        
+      }, 1000)
+      
       
       } else {
 
       this.answersIncorrect++;
+      setTimeout(() => {
+        this.next();
+          
+        }, 1000)
       }
     }
 

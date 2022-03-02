@@ -1,12 +1,14 @@
-<div class="container text-center">
-    <div class="card">
+<div class="container text-center m-4">
+    <div class="card card-container">
 
-        <div class="card-header">
+        <div class="card-header mt-5">
             <h3>{{questionsList[thisQuestion].quizName}}</h3>
-            <p>{{questionsList[thisQuestion].categoryName}}</p>
+            <p class="pt-3">Cateogry: {{questionsList[thisQuestion].categoryName}}</p>
         </div>
 
-        <div class="card-body d-flex justify-content-between">
+
+        <div class="quiz-container">
+        <div class="card-body d-flex justify-content-between border">
             <div class="question-tracker">
                 <p>Question: {{thisQuestion+1}} of {{questionsList.length}}</p>
             </div>
@@ -18,7 +20,7 @@
         </div>
 
         <div>
-            <div class="question">
+            <div class="question my-3">
                 <h3>Question: </h3>
                 <br>
                 <div>
@@ -28,17 +30,17 @@
             </div>
         </div>
 
-        <div class="card answer py-3">
+        <div class=" answer py-3 text-center justify-content">
 
             <ol *ngFor="let answer of questionsList[thisQuestion]?.answerList">
-                <li id="answer-click" (click)="chooseRightAnswer(thisQuestion + 1, answer)">
+                <li id="answer-click py-3 my-5" (click)="chooseRightAnswer(thisQuestion + 1, answer)">
                     <div appAnswerHighlight [correct]="answer.correct">{{answer.answer}}</div>
 
                 </li>
             </ol>
 
         </div>
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between m-3">
             <button type="button" (click)="previous()" [disabled]="thisQuestion===0"
                 class="btn btn-outline-success">Previous</button>
 
@@ -51,21 +53,23 @@
 
         </div>
 
+    </div>
+
         <ng-container *ngIf="lastQuestion">
+           
 
             <div class="row d-flex justify-content-between">
-                <img style="width: 50%;" class="img-fluid col-sm-12 mx-auto" alt="">
-                <div class="result text-center col-md-6 col-sm-12">
+                <div class="result text-center py-3">
                     <h3>
                         Nice Work! Here are your Results:
                     </h3>
-                    <div class="card">Total Questions: {{questionsList.length}} </div>
-                    <div class="card">Total Correct Answers: {{answersCorrect}} </div>
-                    <div class="card">Total InCorrect Answers: {{answersIncorrect}}</div>
-                    <div class="card">Total Score : {{score}} points </div>
+                    <div class="card py-3">Total Questions: {{questionsList.length}} </div>
+                    <div class="card py-3">Total Correct Answers: {{answersCorrect}} </div>
+                    <div class="card py-3">Total Incorrect Answers: {{answersIncorrect}}</div>
+                    <div class="card py-3 total">Total Score : {{score}} points </div>
                 </div>
             </div>
         </ng-container>
 </div>
-<div>
+</div>
 
