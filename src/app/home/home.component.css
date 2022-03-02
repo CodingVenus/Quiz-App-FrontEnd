@@ -63,9 +63,6 @@ a {
 }
 
 
-.hover-scale, .hover-scale:hover {
-    transition: transform .2s ease-in;
-}
 
 .card {
     position: relative;
@@ -73,11 +70,14 @@ a {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: transparent;
+    background-color: #ecf0f3;
     background-clip: border-box;
-    border: 1px solid rgba(238, 68, 1, .2);
-    border-radius: 0rem;
-    box-shadow: 4px 8px 2px 0 rgba(236, 170, 170, 0.3);
+    border: 1px solid rgba(230, 70, 8, 0.8);
+    box-shadow: 4px 3px 2px 0 rgba(197, 191, 191, 0.6);
+}
+.card:hover{
+    background-color: #ebd3d3;
+
 }
 
 .card-body {

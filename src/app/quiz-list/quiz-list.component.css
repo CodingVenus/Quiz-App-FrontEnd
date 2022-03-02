@@ -26,6 +26,10 @@
     
 
 }
+
+.card:hover{
+    background-color: rgb(233, 214, 214);
+}
 .card-body {
     /* display: block; */
  /* font-family: Poppins; */
