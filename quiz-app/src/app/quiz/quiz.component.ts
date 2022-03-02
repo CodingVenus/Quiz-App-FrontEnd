@@ -13,8 +13,10 @@ export class QuizComponent implements OnInit {
 public questionsList: Question[] = [];
 public score: number = 0;
 public thisQuestion: number = 0;
-public clicked = false;
-
+public clicked: boolean = false;
+public lastQuestion: boolean = false;
+public answersCorrect: number =0;
+public answersIncorrect: number = 0;
 
 public quizId: any;
 
@@ -60,16 +62,27 @@ public quizId: any;
     }
 
     chooseRightAnswer(thisQuestion: number, answer: any ){
+
+
+      if( thisQuestion === this.questionsList.length) {
+        this.lastQuestion = true;
+      }
+
       if(answer.correct){
       this.score+= 20;
+      this.answersCorrect ++;
       
       } else {
 
+      this.answersIncorrect++;
       }
+    }
+
+    reset() {
 
     }
 
-    
+
   
 
 }
