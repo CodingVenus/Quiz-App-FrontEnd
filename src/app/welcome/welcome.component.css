@@ -6,11 +6,6 @@
     background-color: #ecf0f3;
 }
 
-/* .welcome-header{
-    text-shadow: -1px 0 #f54914, 0 1px #f54914, 1px 0 #f54914, 0 -1px #f54914;
-
-    color: #f54914;
-} */
 .container {
   display: flex;
   align-items: center;

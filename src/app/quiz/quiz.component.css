@@ -29,10 +29,7 @@ background-color: #ecf0f3;
 background-color: white;
 
 }
-/* .card-container{
-    border: 1px solid;
-    border-radius: 20%;
-} */
+
 .quiz-container .card{
     background-color: white;
 }
@@ -48,11 +45,7 @@ margin-left: 30%;
 
 #answer-click{
 background-color: white;
-  /* margin: 10px; */
-  /* width: 400px; */
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
+
   margin:20%;
   border: solid 1px;
   height: 30px;

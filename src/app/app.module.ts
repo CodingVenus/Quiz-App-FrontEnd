@@ -4,12 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CategoryService } from './services/category.service';
-import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,10 +17,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     QuizComponent,
 
-    // CategoryComponent,
     HomeComponent,
     QuizListComponent,
     AnswerHighlightDirective,

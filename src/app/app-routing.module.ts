@@ -8,7 +8,6 @@ import { QuizComponent } from './quiz/quiz.component';
 
 
 const routes: Routes = [
-  // {path: '', redirectTo: "home", pathMatch: "full" },
   {
     path: "", component: HomeComponent,
 
@@ -21,18 +20,7 @@ const routes: Routes = [
       }
     ]
   }
-  // {path: "category", component: CategoryComponent},
 
-
-  // {path: "category/:id/quizzes", component: QuizListComponent},
-  // {path: "quiz/:id/questions", component: QuizComponent,
-  // children: [
-
-  // {path: "results", component: ResultsComponent}
-
-  // ]
-
-  // {path:"quiz", component:QuizComponent}
 ];
 
 @NgModule({

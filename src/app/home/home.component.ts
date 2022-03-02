@@ -26,12 +26,10 @@ export class HomeComponent implements OnInit{
 
   
 
-
   public onAddCategory(addForm: NgForm): void {
     this.categoryService.createCategory(addForm.value).subscribe(
     (response: Category) => {
-      // console.log(response);
-      // this.categoryService.getCategories();
+    
       this.ngOnInit();
     },
     (error: HttpErrorResponse) => {
@@ -60,14 +58,15 @@ export class HomeComponent implements OnInit{
     }
   }
 
+  
 //category methods
 
 public getCategories(): void {
   this.categoryService.getCategories().subscribe(
-    // (response: Category[]) => {
+ 
       (data) => {
       this.categoryList = data;
-      // this.ngOnInit();
+
     },
     (error: HttpErrorResponse) => {
       alert(error.message);

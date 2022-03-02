@@ -12,7 +12,6 @@
     width: 600px;
     height: 100%;
     padding: 20px;
-    /* background: #ecf0f3; */
 
 }
 
@@ -57,11 +56,9 @@ a {
     }
 
 /* //category css */
-/* body{margin-top:20px;} */
 .bg-light-primary {
     background-color: #f9fbff !important;
 }
-
 
 
 .card {

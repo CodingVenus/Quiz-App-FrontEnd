@@ -57,7 +57,6 @@ public quizId: any;
     next() {
       if (this.lastQuestion===true) {
         
-        // this.router.navigate([`quiz/${this.quizId}/questions/results`]);
       } else {
 
       this.thisQuestion++;
@@ -97,7 +96,7 @@ public quizId: any;
     }
 
     reset() {
-      // this.getQuestionsByQuizId
+     
       this.score = 0;
       this.answersCorrect = 0;
       this.answersIncorrect = 0;
