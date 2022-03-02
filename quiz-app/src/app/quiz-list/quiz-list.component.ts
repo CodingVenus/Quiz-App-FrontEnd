@@ -50,7 +50,7 @@ export class QuizListComponent implements OnInit {
       .subscribe(
         (response: Quiz[]) => {
           this.quizList = response;
-          console.log(this.quizList);
+          this.ngOnInit();
         },
         (error: HttpErrorResponse) => {
           alert(error.message);
