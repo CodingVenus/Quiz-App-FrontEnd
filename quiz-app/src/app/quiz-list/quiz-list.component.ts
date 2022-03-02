@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from '../entities/category';
 import { Quiz } from '../entities/quiz';
@@ -18,14 +18,30 @@ export class QuizListComponent implements OnInit {
 
   public quizList: Quiz[] = [];
 
+  public quizEvent: any;
 
   constructor(private quizService: QuizService, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.categoryId = this.route.snapshot.paramMap.get('id');
-    this.getQuizzesByCategoryId(this.categoryId);
-  }
 
+
+  // this.route.paramMap.subscribe((param: any) => {
+  //   this.getQuizzesByCategoryId(param.get('id') || '')
+  // }
+
+
+  ngOnInit(): void {
+
+    this.route.paramMap.subscribe((param: any) => {
+      this.getQuizzesByCategoryId(param.get('id') || '')
+    });
+    
+    // this.categoryId = this.route.snapshot.paramMap.get('id');
+    // this.getQuizzesByCategoryId(this.categoryId);
+    // this.quizEvent = this.getQuizzesByCategoryId(this.categoryId);
+  }
+  // ngOnDestroy() {
+  //   this.quizEvent.unsubscribe();
+  // }
 
   public getQuizzes(): void {
     this.quizService.getQuizzes().subscribe(
@@ -47,7 +63,7 @@ export class QuizListComponent implements OnInit {
       .subscribe(
         (response: Quiz[]) => {
           this.quizList = response;
-          this.ngOnInit();
+          // this.ngOnInit();
         },
         (error: HttpErrorResponse) => {
           alert(error.message);

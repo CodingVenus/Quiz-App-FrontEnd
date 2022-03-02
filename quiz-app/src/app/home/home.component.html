@@ -1,5 +1,5 @@
 <!-- <p >under contruction</p> -->
-<div class=" d-flex">
+<div class="d-flex" >
 
     <div class="side-bar">
 
@@ -18,10 +18,12 @@
                     (click)="open(content)">New Category</button>
             </div>
 
+           
+
             <div *ngFor="let category of categoryList">
                 <div class="col my-3">
                     <div class="card border-hover-primary hover-scale">
-                       <a routerLink="/category/{{category?.id}}/quizzes"> 
+                       <a routerLink="category/{{category?.id}}/quizzes"> 
                 
                            <div class="card-body">
                           
@@ -37,7 +39,10 @@
     </div>
 
 
-    <div>
+    <div class="container">
+        <div class="quiz-page-header m-5 text-center">
+            <h4>QUIZZES by</h4>
+        </div>
         <router-outlet></router-outlet>
         <p>hi</p>
         <!-- <app-quiz-list></app-quiz-list> -->

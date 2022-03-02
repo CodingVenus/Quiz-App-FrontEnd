@@ -1,25 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Category } from '../entities/category';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
 import { CategoryService } from '../services/category.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit{
   public categoryList: Category[] | undefined;
+
   
   closeResult: string | undefined;
 
-  constructor(private modalService: NgbModal, private categoryService : CategoryService) { }
+  constructor(private modalService: NgbModal, private categoryService : CategoryService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
     this.getCategories();
   }
+
+  
 
 
   public onAddCategory(addForm: NgForm): void {
