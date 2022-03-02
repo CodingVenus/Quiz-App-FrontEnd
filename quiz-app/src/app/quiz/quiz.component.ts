@@ -56,7 +56,7 @@ public quizId: any;
     next() {
       if (this.lastQuestion===true) {
         
-        this.router.navigate(['/results']);
+        this.router.navigate([`quiz/${this.quizId}/questions/results`]);
       } else {
 
       this.thisQuestion++;
@@ -68,7 +68,6 @@ public quizId: any;
     }
 
     chooseRightAnswer(thisQuestion: number, answer: any ){
-
 
       if( (thisQuestion) === this.questionsList.length) {
         this.lastQuestion = true;

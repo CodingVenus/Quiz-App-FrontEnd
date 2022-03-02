@@ -21,11 +21,16 @@ const routes: Routes = [
   
 
   // {path: "category/:id/quizzes", component: QuizListComponent},
-  {path: "quiz/:id/questions", component: QuizComponent},
+  {path: "quiz/:id/questions", component: QuizComponent,
+  children: [
+
   {path: "results", component: ResultsComponent}
+
+  ]
   
   // {path:"quiz", component:QuizComponent},
 
+  }
 ];
 
 @NgModule({
