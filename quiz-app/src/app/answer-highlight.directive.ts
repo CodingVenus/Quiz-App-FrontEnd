@@ -20,7 +20,9 @@ export class AnswerHighlightDirective {
         this.render.setStyle(this.element.nativeElement,'color', '#fff');
 
       } else {
-        
+        this.render.setStyle(this.element.nativeElement, 'background', 'orange');
+        this.render.setStyle(this.element.nativeElement,'border', '2px dark orange');
+        this.render.setStyle(this.element.nativeElement,'color', '#fff');
       }
     }
 
