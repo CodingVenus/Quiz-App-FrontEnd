@@ -11,27 +11,29 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public categoryList: Category[] | undefined;
+  
   closeResult: string | undefined;
 
   constructor(private modalService: NgbModal, private categoryService : CategoryService) { }
 
   ngOnInit(): void {
-
+    this.getCategories();
   }
 
 
   public onAddCategory(addForm: NgForm): void {
     this.categoryService.createCategory(addForm.value).subscribe(
     (response: Category) => {
-      console.log(response);
-      this.categoryService.getCategories();
+      // console.log(response);
+      // this.categoryService.getCategories();
+      this.ngOnInit();
     },
     (error: HttpErrorResponse) => {
       alert(error.message);
     }
     );
   }
-
 
   //BOOTSTRAP MODAL METHODS
   open(content: any) {
@@ -52,4 +54,19 @@ export class HomeComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+//category methods
+
+public getCategories(): void {
+  this.categoryService.getCategories().subscribe(
+    // (response: Category[]) => {
+      (data) => {
+      this.categoryList = data;
+      // this.ngOnInit();
+    },
+    (error: HttpErrorResponse) => {
+      alert(error.message);
+    }
+  );
+}
 }

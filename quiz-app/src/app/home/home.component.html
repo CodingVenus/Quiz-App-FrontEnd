@@ -1,8 +1,6 @@
 <!-- <p >under contruction</p> -->
 <div class=" d-flex">
 
-
-
     <div class="side-bar">
 
         <div class="title d-flex justify-content-evenly">
@@ -20,7 +18,20 @@
                     (click)="open(content)">New Category</button>
             </div>
 
-            <app-category></app-category>
+            <div *ngFor="let category of categoryList">
+                <div class="col my-3">
+                    <div class="card border-hover-primary hover-scale">
+                       <a routerLink="/category/{{category?.id}}/quizzes"> 
+                
+                           <div class="card-body">
+                          
+                            <h6 class="font-weight-bold mb-3">CATEGORY NAME: {{category?.name}}</h6>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <app-category></app-category> -->
         </div>
 
     </div>

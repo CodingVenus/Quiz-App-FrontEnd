@@ -22,8 +22,6 @@ export class QuizListComponent implements OnInit {
   constructor(private quizService: QuizService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
-
     this.categoryId = this.route.snapshot.paramMap.get('id');
     this.getQuizzesByCategoryId(this.categoryId);
   }
@@ -34,7 +32,7 @@ export class QuizListComponent implements OnInit {
       (response: Quiz[]) => {
         this.quizList = response;
         console.log(this.quizList);
-        this.ngOnInit();
+      
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -49,6 +47,7 @@ export class QuizListComponent implements OnInit {
       .subscribe(
         (response: Quiz[]) => {
           this.quizList = response;
+          this.ngOnInit();
         },
         (error: HttpErrorResponse) => {
           alert(error.message);
