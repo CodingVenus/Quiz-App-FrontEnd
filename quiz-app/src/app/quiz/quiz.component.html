@@ -32,7 +32,7 @@
             
                 <ol *ngFor="let answer of questionsList[thisQuestion]?.answerList">
                     <li (click)="chooseRightAnswer(thisQuestion, answer)" >
-                        <div>{{answer.answer}}</div>
+                        <div appAnswerHighlight [correct]="answer.correct">{{answer.answer}}</div>
                         
                     </li>
                 </ol>
