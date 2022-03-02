@@ -10,31 +10,38 @@ import { ResultsComponent } from './results/results.component';
 
 const routes: Routes = [
   // {path: '', redirectTo: "home", pathMatch: "full" },
-  {path: "", component: HomeComponent, 
+  {
+    path: "", component: HomeComponent,
 
-  children: [
-    {path: "category/:id/quizzes", component: QuizListComponent}
-  ]
+    children: [
+      { path: "category/:id/quizzes", component: QuizListComponent },
+      {
+        path: "quiz/:id/questions", component: QuizComponent,
+        children: [
 
-},
+          { path: "results", component: ResultsComponent }
+
+        ]
+
+      }
+    ]
+  }
   // {path: "category", component: CategoryComponent},
-  
+
 
   // {path: "category/:id/quizzes", component: QuizListComponent},
-  {path: "quiz/:id/questions", component: QuizComponent,
-  children: [
+  // {path: "quiz/:id/questions", component: QuizComponent,
+  // children: [
 
-  {path: "results", component: ResultsComponent}
+  // {path: "results", component: ResultsComponent}
 
-  ]
-  
-  // {path:"quiz", component:QuizComponent},
+  // ]
 
-  }
+  // {path:"quiz", component:QuizComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
-})  
+})
 export class AppRoutingModule { }
