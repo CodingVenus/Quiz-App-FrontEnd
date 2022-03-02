@@ -11,7 +11,12 @@ export class AnswerHighlightService {
 
 
   constructor(private element : ElementRef, private render: Renderer2) {
-  @HostListener('click') 
+  @HostListener('click') chooseRightAnswer(){
+    if(this.correct) {
+      this.render.setStyle(this.element.nativeElement, 'background', 'green');
+      
+    }
+  }
 
 
 

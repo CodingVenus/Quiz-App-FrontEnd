@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AnswerHighlightDirective } from './answer-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     // CategoryComponent,
     HomeComponent,
     QuizListComponent,
+    AnswerHighlightDirective,
   
   ],
   imports: [
