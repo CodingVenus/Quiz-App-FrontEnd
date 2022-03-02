@@ -31,9 +31,9 @@
         <div class="card answer py-3">
             
                 <ol *ngFor="let answer of questionsList[thisQuestion]?.answerList">
-                    <li (click)="chooseRightAnswer(thisQuestion, answer)" >
+                    <li id="answer-click" (click)="chooseRightAnswer(thisQuestion + 1, answer)" >
                         <div appAnswerHighlight [correct]="answer.correct">{{answer.answer}}</div>
-                        
+            
                     </li>
                 </ol>
             
@@ -41,7 +41,8 @@
         <div class="d-flex justify-content-between">
             <button type="button" (click)="previous()" [disabled]="thisQuestion===0"  class="btn btn-outline-success">Previous</button>
 
-            <button type="button" (click)="next()" class="btn btn-outline-success">Next</button>
+            <!-- <button type="button" (click)="next()" class="btn btn-outline-success">Next</button> -->
+            <button type="button" (click)="next()" [disabled]="lastQuestion===true" class="btn btn-outline-success">Next</button>
 
         </div>
 

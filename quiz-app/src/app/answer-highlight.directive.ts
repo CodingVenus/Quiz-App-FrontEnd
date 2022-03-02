@@ -16,13 +16,16 @@ export class AnswerHighlightDirective {
 
       if(this.correct) {
         this.render.setStyle(this.element.nativeElement, 'background', 'green');
-        this.render.setStyle(this.element.nativeElement,'border', '2px dark green');
+        this.render.setStyle(this.element.nativeElement,'border', '2px dark-green');
         this.render.setStyle(this.element.nativeElement,'color', '#fff');
+        this.render.setStyle(this.element.nativeElement,'pointer-events', 'none');
 
       } else {
         this.render.setStyle(this.element.nativeElement, 'background', 'orange');
-        this.render.setStyle(this.element.nativeElement,'border', '2px dark orange');
+        this.render.setStyle(this.element.nativeElement,'border', '2px dark-orange');
         this.render.setStyle(this.element.nativeElement,'color', '#fff');
+        this.render.setStyle(this.element.nativeElement,'pointer-events', 'none');
+
       }
     }
 
