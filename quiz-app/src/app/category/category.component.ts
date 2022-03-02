@@ -24,7 +24,7 @@ export class CategoryComponent implements OnInit {
     this.categoryService.getCategories().subscribe(
       (response: Category[]) => {
         this.categoryList = response;
-        console.log(this.categoryList);
+        this.ngOnInit();
       },
       (error: HttpErrorResponse) => {
         alert(error.message);

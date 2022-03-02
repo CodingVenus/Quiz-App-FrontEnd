@@ -8,11 +8,18 @@ import { QuizComponent } from './quiz/quiz.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
-  {path: "category", component: CategoryComponent },
+  // {path: '', redirectTo: "home", pathMatch: "full" },
+  {path: "", component: HomeComponent, 
 
-  {path: "category/:id/quizzes", component: QuizListComponent},
+  children: [
+    {path: "category/:id/quizzes", component: QuizListComponent}
+  ]
+
+},
+  {path: "category", component: CategoryComponent},
+  
+
+  // {path: "category/:id/quizzes", component: QuizListComponent},
   {path: "quiz/:id/questions", component: QuizComponent}
 
   

@@ -1,27 +1,39 @@
 <!-- <p >under contruction</p> -->
+<div class=" d-flex">
 
-<div class="side-bar">
 
-    <div class="title d-flex justify-content-evenly">
-        <div class="logo">
-            QUIZZLE
+
+    <div class="side-bar">
+
+        <div class="title d-flex justify-content-evenly">
+            <div class="logo">
+                QUIZZLE
+            </div>
         </div>
-    </div>
-    <div class="category-container">
-        <div class="d-flex justify-content-evenly category-header py-3">
-            <h3>Categories</h3>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#categoryButton"
-                (click)="open(content)">New Category</button>
-            <!-- Button trigger modal -->
+        <div class="category-container">
+            <div class="d-flex justify-content-evenly category-header py-3">
+                <h3>Categories</h3>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#categoryButton"
+                    (click)="open(content)">New Category</button>
+            </div>
 
+            <app-category></app-category>
         </div>
 
-        <app-category></app-category>
     </div>
-    <!-- Modal -->
+
+
+    <div>
+        <router-outlet></router-outlet>
+        <p>hi</p>
+        <!-- <app-quiz-list></app-quiz-list> -->
+        
+    </div>
 
 </div>
 
+
+<!-- MODAL -->
 <ng-template #content let-modal>
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Add A New Category</h4>
@@ -32,8 +44,9 @@
 
             <label for="name">Category Name</label>
             <div class="input-group">
-                <input ngModel type="text" name="name" class="form-control" id="name" placeholder="Type in Category Name" required>
-            </div> 
+                <input ngModel type="text" name="name" class="form-control" id="name"
+                    placeholder="Type in Category Name" required>
+            </div>
 
             <!-- <div class="mb-3">
                 <label for="dateOfBirth">Date of birth</label>
@@ -46,6 +59,7 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button [disabled]="addForm.invalid" type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        <button [disabled]="addForm.invalid" type="submit" class="btn btn-outline-dark"
+            (click)="modal.close('Save click')">Save</button>
     </div>
 </ng-template>

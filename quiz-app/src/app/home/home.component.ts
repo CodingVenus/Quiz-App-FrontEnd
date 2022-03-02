@@ -33,8 +33,6 @@ export class HomeComponent implements OnInit {
   }
 
 
-
-
   //BOOTSTRAP MODAL METHODS
   open(content: any) {
 
