@@ -1,6 +1,6 @@
  import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Question } from '../entities/question';
 import { QuestionService } from '../services/question.service';
 
@@ -20,7 +20,7 @@ public answersIncorrect: number = 0;
 
 public quizId: any;
 
-  constructor(private questionService: QuestionService, private route: ActivatedRoute ) { }
+  constructor(private questionService: QuestionService, private route: ActivatedRoute, private router : Router ) { }
 
   ngOnInit(): void {
 
@@ -54,7 +54,13 @@ public quizId: any;
   }
 
     next() {
+      if (this.lastQuestion===true) {
+        
+        this.router.navigate(['/results']);
+      } else {
+
       this.thisQuestion++;
+      }
     }
 
     previous() {
@@ -79,7 +85,11 @@ public quizId: any;
     }
 
     reset() {
-
+      // this.getQuestionsByQuizId
+      this.score = 0;
+      this.answersCorrect = 0;
+      this.thisQuestion = 0;
+      
     }
 
 
