@@ -70,8 +70,9 @@ public quizId: any;
     chooseRightAnswer(thisQuestion: number, answer: any ){
 
 
-      if( thisQuestion === this.questionsList.length) {
+      if( (thisQuestion) === this.questionsList.length) {
         this.lastQuestion = true;
+        this.next();
       }
 
       if(answer.correct){
