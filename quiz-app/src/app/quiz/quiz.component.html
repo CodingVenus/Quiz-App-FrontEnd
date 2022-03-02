@@ -12,44 +12,61 @@
             </div>
             <div class="current-score">
                 <p>
-                    Score: {{score}} 
+                    Score: {{score}}
                 </p>
             </div>
         </div>
 
         <div>
             <div class="question">
-               <h3>Question: </h3> 
-                   <br>
-                   <div>
+                <h3>Question: </h3>
+                <br>
+                <div>
 
-                   <h4>{{questionsList[thisQuestion]?.question}}</h4> 
+                    <h4>{{questionsList[thisQuestion]?.question}}</h4>
                 </div>
             </div>
         </div>
 
         <div class="card answer py-3">
-            
-                <ol *ngFor="let answer of questionsList[thisQuestion]?.answerList">
-                    <li id="answer-click" (click)="chooseRightAnswer(thisQuestion + 1, answer)" >
-                        <div appAnswerHighlight [correct]="answer.correct">{{answer.answer}}</div>
-            
-                    </li>
-                </ol>
-            
+
+            <ol *ngFor="let answer of questionsList[thisQuestion]?.answerList">
+                <li id="answer-click" (click)="chooseRightAnswer(thisQuestion + 1, answer)">
+                    <div appAnswerHighlight [correct]="answer.correct">{{answer.answer}}</div>
+
+                </li>
+            </ol>
+
         </div>
         <div class="d-flex justify-content-between">
-            <button type="button" (click)="previous()" [disabled]="thisQuestion===0"  class="btn btn-outline-success">Previous</button>
+            <button type="button" (click)="previous()" [disabled]="thisQuestion===0"
+                class="btn btn-outline-success">Previous</button>
 
 
-            <button type="button" (click)="reset()" [disabled]="lastQuestion===true" class="btn btn-outline-success">Reset</button>
+            <button type="button" (click)="reset()" 
+                class="btn btn-outline-success">Reset</button>
 
             <!-- <button type="button" (click)="next()" class="btn btn-outline-success">Next</button> -->
-            <button type="button" (click)="next()" class="btn btn-outline-success">Next</button>
+            <button type="button" (click)="next()" [disabled]="thisQuestion===questionsList.length-1" class="btn btn-outline-success">Next</button>
 
         </div>
 
-    </div>
+        <ng-container *ngIf="lastQuestion">
+
+            <div class="row d-flex justify-content-between">
+                <img style="width: 50%;" class="img-fluid col-sm-12 mx-auto" alt="">
+                <div class="result text-center col-md-6 col-sm-12">
+                    <h3>
+                        Nice Work! Here are your Results:
+                    </h3>
+                    <div class="card">Total Questions: {{questionsList.length}} </div>
+                    <div class="card">Total Correct Answers: {{answersCorrect}} </div>
+                    <div class="card">Total InCorrect Answers: {{answersIncorrect}}</div>
+                    <div class="card">Total Score : {{score}} points </div>
+                </div>
+            </div>
+        </ng-container>
 
 </div>
-<router-outlet></router-outlet>
+<div>
+

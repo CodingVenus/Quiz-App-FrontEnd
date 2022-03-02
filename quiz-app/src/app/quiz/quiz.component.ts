@@ -15,7 +15,7 @@ public score: number = 0;
 public thisQuestion: number = 0;
 public clicked: boolean = false;
 public lastQuestion: boolean = false;
-public answersCorrect: number =0;
+public answersCorrect: number = 0;
 public answersIncorrect: number = 0;
 
 public quizId: any;
@@ -56,7 +56,7 @@ public quizId: any;
     next() {
       if (this.lastQuestion===true) {
         
-        this.router.navigate([`quiz/${this.quizId}/questions/results`]);
+        // this.router.navigate([`quiz/${this.quizId}/questions/results`]);
       } else {
 
       this.thisQuestion++;
@@ -88,6 +88,7 @@ public quizId: any;
       // this.getQuestionsByQuizId
       this.score = 0;
       this.answersCorrect = 0;
+      this.answersIncorrect = 0;
       this.thisQuestion = 0;
       
     }
