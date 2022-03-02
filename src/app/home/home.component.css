@@ -12,7 +12,7 @@
     width: 600px;
     height: 100%;
     padding: 20px;
-    background: #ecf0f3;
+    /* background: #ecf0f3; */
 
 }
 
@@ -51,6 +51,10 @@ a:active {
     text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+     text-decoration-color: none; 
+    }
 
 /* //category css */
 /* body{margin-top:20px;} */
@@ -69,15 +73,20 @@ a:active {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: transparent;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .4rem;
-    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    border: 1px solid rgba(238, 68, 1, .2);
+    border-radius: 0rem;
+    box-shadow: 4px 8px 2px 0 rgba(236, 170, 170, 0.3);
 }
 
 .card-body {
     flex: 1 1 auto;
     min-height: 1px;
-    padding: 1.25rem;
+    padding: 0.5rem;
+    padding-top: 20px;
+    color: rgb(40, 110, 27);
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 600;
 }

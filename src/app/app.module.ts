@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AnswerHighlightDirective } from './answer-highlight.directive';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AnswerHighlightDirective } from './answer-highlight.directive';
     HomeComponent,
     QuizListComponent,
     AnswerHighlightDirective,
+    WelcomeComponent,
   
   ],
   imports: [

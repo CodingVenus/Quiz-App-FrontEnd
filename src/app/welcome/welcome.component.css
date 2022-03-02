@@ -1,0 +1,36 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+.card{
+    background-color: #ecf0f3;
+}
+
+/* .welcome-header{
+    text-shadow: -1px 0 #f54914, 0 1px #f54914, 1px 0 #f54914, 0 -1px #f54914;
+
+    color: #f54914;
+} */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quiz-title{
+    position: relative;
+    font-family: 'Monoton', sans-serif !important;
+    color: #f54914;
+}
+.welcome-header{
+    margin-top: 10%
+}
+.creator{
+    margin-top: 20%;
+    border: solid 2px;
+    box-shadow: 10px 5px 5px #cdddec;
+    border-color: #f54914; 
+}
+.font-weight-bold{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
