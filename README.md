@@ -31,10 +31,12 @@ The goal of Quizzle is to provide a platform that will allow you to not only sea
         - My first wireframe designs included a Homepage, Quiz page, and Results page.
 - Initially, I decided to focus on building out the functionality of the Quiz page. 
 - I wanted users to be able to see:
+
         - The total number of questions in the quiz
         - Which number question they were currently on
         - An indicator that would let them know that their answer choice was right or wrong
         - Their current score
+		
 - Finally, after the last question they would be directed to a page dispalying their results.
 - The home page would feature the list of categories as well as their corresponding quizzes, with buttons that would allow you to create a cateogry or quiz.
 
@@ -45,7 +47,7 @@ The goal of Quizzle is to provide a platform that will allow you to not only sea
 
 
 ## THE PROCESS
-While building out the features for the quiz, I came to realize that it would be to my benefit to add even more modularity to the application. This meant creating a Questions List component.  
+While building out the features for the quiz, I came to realize that it would be to my benefit to add even more modularity to the application. I ended up creating several more components such as a Quiz List component. By the end of building the application, some additional components proved useful but others were deleted.   
 
 ## CHALLENGES
 I faced many challenges during this project that required a significant amount of research on my part. Some bigger issues included: 
