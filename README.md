@@ -1,4 +1,4 @@
-# **Quiz App Spring Back End**
+# **Quiz App Angular FrontEnd**
 
 ## OBJECTIVE
 
