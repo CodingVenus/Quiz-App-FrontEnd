@@ -53,7 +53,7 @@ While building out the features for the quiz, I came to realize that it would be
 I faced many challenges during this project that required a significant amount of research on my part. Some bigger issues included: 
 - Building out the features of the quiz --> I had to learn more about event binding, building attribute directives, implementing ngOnInIt and more.
 - Retrieving items based on the ID of their parent resource --> Activated routes, query param mapping, snapshots, etc.
-- Getting the items retrieved from the database to appear without refresh (also fixing infinite request loop issues) --> Proeprly subscribing and unsubscribing from observables.
+- Getting the items retrieved from the database to appear without refresh (also fixing infinite request loop issues) --> Properly subscribing and unsubscribing from Observables.
 
 Overall, building this application provided a great opportunity for me to fine tune my Angular knowledge.
 
