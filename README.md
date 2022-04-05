@@ -9,14 +9,6 @@ The goal of Quizzle is to provide a platform that will allow you to not only sea
 
 - [Link to Deployed App on Heroku](https://quizzle-angular-app.herokuapp.com/)
 
-#### CURRENT STATUS: 
-**
-
-*Work in Progress*
-
-**
-
-
 
 ### TOOLS AND TECHNOLOGIES USED
 **DESIGN**
