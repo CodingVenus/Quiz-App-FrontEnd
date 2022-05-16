@@ -57,6 +57,11 @@ I faced many challenges during this project that required a significant amount o
 
 Overall, building this application provided a great opportunity for me to fine tune my Angular knowledge.
 
+## FINAL DESIGN
+![Home Page](planning/quizzle-homepage.png)
+![Categories Page](planning/quizzle-categories.png)
+![Results Page](planning/quizzle-java-results2.png)
+
 ## UNFINISHED
 - Multiple frontend CRUD functionality such as allowing users to create, update, and delete quizzes.
 
