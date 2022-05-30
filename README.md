@@ -4,6 +4,9 @@
 
 The goal of Quizzle is to provide a platform that will allow you to not only search through different quizzes, but create your own as well. This app is a frontend application that will showcase the different quiz categories and their corresponding quizzes. It is built in conjunction with a backend Rest API that will allow a user to create different quizzes based on the category of their choosing. This frontend app was built using HTML, CSS, BootStrap, Javascript and Angular.
 
+#### Status
+* Work in Progress 
+
 #### Links
 - [Link to BackEnd App Repository](https://github.com/CodingVenus/Quiz-App-BackEnd) 
 
